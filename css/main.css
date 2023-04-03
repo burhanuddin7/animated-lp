@@ -1252,6 +1252,7 @@ body {
     display: inline-block;
     vertical-align: middle;
     transition: 0.25s all ease-in;
+    -webkit-appearance: none;
 }
 
 .primary-btn:hover,
@@ -1274,6 +1275,7 @@ body {
     border: 1px solid var(--white-color);
     outline: none;
     cursor: pointer;
+    -webkit-appearance: none;
     transition: 0.25s all ease-in;
 }
 
@@ -2040,6 +2042,10 @@ header {
 }
 
 @media screen and (max-width: 640px) {
+    .key-benefits-section__subtitle {
+        max-width: 80%;
+    }
+
     .container {
         max-width: calc(100% - 40px);
     }
@@ -2055,6 +2061,7 @@ header {
 
     .form-input {
         min-width: var(--full-width);
+        width: var(--full-width);
         margin-right: 0;
         margin-bottom: 20px;
     }
