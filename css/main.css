@@ -366,6 +366,7 @@ ul {
 img {
     display: inline-block;
     vertical-align: middle;
+    transition: 0.25s all ease-in;
 }
 
 a {
