@@ -7,6 +7,8 @@ Github URL: https://burhanuddin7.github.io/animated-lp/
 
 Highlights:
 - Fully functional Landing page which is responsive in every device and browser
+- Hamburger Menu for mobile and Ipad devices
+- Menu click scroll to section single page application feature
 - Custom CSS for the landing page
 - Animation effects for the vectors and images provided in different section (Ex- FadeIn, FadeInLeft, FadeInRight etc)
 - Implemented CSS variables, common classes, grid classes and used REM for font typography
