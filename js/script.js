@@ -51,6 +51,24 @@ jQuery(document).ready(function () {
 
     sectionAnimation();
     sectionImgAnimation();
+
+    /*Hamburger menu Mobile*/
+    jQuery('.nav__toggle-btn').on('click', function () {
+        jQuery('.nav__menu').slideToggle();
+    });
+
+    /* On menu click scroll to section*/
+    jQuery('.nav__menu-list li:not(.nav__menu-list-item--var) a').click(function (event) {
+        event.preventDefault(); // prevent default action of anchor
+        jQuery('.nav__menu-list li a').removeClass('current-active-item');
+        var keyword = jQuery(this).text().trim().toLowerCase();
+        keyword = keyword.replace(/ /g, '-');
+        var scrollTo = jQuery('#' + keyword);
+        jQuery(this).addClass('current-active-item');
+        jQuery('html, body').animate({
+            scrollTop: scrollTo.offset().top - 60
+        }, 'slow');
+    });
 });
 
 jQuery.fn.detectViewPort = function () {

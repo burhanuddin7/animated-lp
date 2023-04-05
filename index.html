@@ -7,9 +7,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
     <meta name="theme-color" content="#FFBC02" />
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
     <meta name="description" content="Burhan Madraswala - Animated Landing Page" />
-    <link rel="stylesheet" href="css/main.css?k=1.2">
+    <link rel="stylesheet" href="css/main.css?k=1.3">
     <script src="js/jquery-3.6.4.min.js"></script>
 </head>
 
@@ -21,9 +22,36 @@
                 <div class="row nav__main">
                     <div class="no-pad col-2 nav__logo">
                         <a href="/" class="nav__link" title="TaskMan">TaskMan</a>
+                        <div class="nav__toggle-btn">
+                            <i class="fa fa-bars" aria-hidden="true"></i>
+                        </div>
                     </div>
                     <div class="no-pad col-10 nav__menu">
-                        <a href="javasript:void(0)" class="secondary-btn" title="Try Free">Try Free</a>
+                        <ul class="nav__menu-list">
+                            <li class="nav__menu-list-item">
+                                <a title="Benefits" href="#">
+                                    Benefits
+                                </a>
+                            </li>
+                            <li class="nav__menu-list-item">
+                                <a title="Work" href="#">
+                                    Work
+                                </a>
+                            </li>
+                            <li class="nav__menu-list-item">
+                                <a title="Contact Us" href="#">
+                                    Contact Us
+                                </a>
+                            </li>
+                            <li class="nav__menu-list-item nav__menu-list-item--var nav__menu-list-item--mob">
+                                <a title="Try Free" href="javascript:void(0)">
+                                    Try Free
+                                </a>
+                            </li>
+                            <li class="nav__menu-list-item nav__menu-list-item--var nav__menu-list-item--desk">
+                                <a href="javascript:void(0)" class="secondary-btn" title="Try Free">Try Free</a>
+                            </li>
+                        </ul>
                     </div>
                 </div>
             </div>
@@ -31,7 +59,7 @@
     </header>
     <div class="main-container">
         <!-- Banner Section -->
-        <section class="banner-section">
+        <section class="banner-section" id="home">
             <div class="container">
                 <div class="row">
                     <div class="banner-section__left">
@@ -108,7 +136,7 @@
         </section>
 
         <!-- Key Benefits Section-->
-        <section class="key-benefits-section">
+        <section class="key-benefits-section" id="benefits">
             <div class="custom-container">
                 <h2 class="key-benefits-section__heading">Key benefits of using task management software</h2>
                 <div class="row key-benefits-section__card-container">
@@ -144,7 +172,7 @@
         </section>
 
         <!-- Why do you need section-->
-        <section class="why-need-section">
+        <section class="why-need-section" id="work">
             <div class="why-need-section__left">
                 <div class="why-need-section__bg-main">
                     <div data-delay="200" class="hide-xs hide-sm why-need-section__yellow-bg to-animate-elem"
@@ -178,7 +206,7 @@
                             figuring out what to work on first? Then you need one solution to prioritize your tasks,
                             manage your time, and meet your deadlines.
                         </div>
-                        <a href="javascript: void(0)" class="why-need-section__link" title="Learn More">
+                        <a href="javascript:void(0)" class="why-need-section__link" title="Learn More">
                             <span data-delay="2400" class="to-animate-elem" data-animate="fadeInUp animated">LEARN
                                 MORE</span>
                             <img data-delay="3200" class="lazy-load-img why-need-section__link-arrow"
@@ -191,7 +219,7 @@
         </section>
 
         <!-- Get work done Section-->
-        <section class="work-done-section">
+        <section class="work-done-section" id="contact-us">
             <div class="custom-container">
                 <div class="work-done-section__content">
                     <h2 class="work-done-section__heading">Get better work done</h2>
@@ -217,6 +245,19 @@
             </div>
         </section>
     </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12">
+                    <p class="text-center to-animate-elem" data-animate="fadeInUp animated">© Copyright
+                        2023 All Rights Reserved by <a href="/">TaskMan</a></p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
     <!-- External JS files -->
     <script src="js/script.js"></script>
 </body>

@@ -415,6 +415,10 @@ body {
     float: right;
 }
 
+.text-center {
+    text-align: center;
+}
+
 .container {
     width: var(--full-width);
     padding-right: 15px;
@@ -1385,6 +1389,64 @@ header {
     text-align: right;
 }
 
+.nav__toggle-btn {
+    display: none;
+}
+
+.nav__menu-list .nav__menu-list-item {
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 18px;
+    font-weight: var(--font-normal);
+    margin-left: 25px;
+    transition: 0.3s all ease-in-out;
+    text-transform: uppercase;
+    letter-spacing: 0.7px;
+    font-family: var(--primary-font);
+}
+
+.nav__menu-list-item:not(:last-child) a {
+    color: var(--white-color);
+    font-weight: var(--font-normal);
+    position: relative;
+    padding: 3px;
+}
+
+.nav__menu-list .nav__menu-list-item--desk {
+    display: inline-block;
+}
+
+.nav__menu-list .nav__menu-list-item--mob {
+    display: none;
+}
+
+.nav__menu-list-item:not(:last-child) a::before {
+    content: "";
+    position: absolute;
+    z-index: 2;
+    left: 50%;
+    right: 50%;
+    bottom: 0;
+    background: var(--white-color);
+    height: 2px;
+    -webkit-transition-property: left, right;
+    transition-property: left, right;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-timing-function: ease-out;
+    transition-timing-function: ease-out;
+}
+
+.nav__menu-list-item:not(:last-child) a.current-active-item::before {
+    left: 0;
+    right: 0;
+}
+
+.nav__menu-list-item:not(:last-child) a:hover::before {
+    left: 0;
+    right: 0;
+}
+
 .banner-section {
     position: relative;
     padding-top: 180px;
@@ -1799,10 +1861,30 @@ header {
     height: 610px;
 }
 
+/*Footer CSS*/
+footer {
+    padding-top: 25px;
+    padding-bottom: 25px;
+    border-top: 1px solid #e6e6e6;
+    color: var(--body-color);
+    font-size: 1.25rem;
+    line-height: 2.25rem;
+}
+
+footer a {
+    color: var(--black-color);
+    text-decoration: none;
+    font-weight: var(--font-semi-bold);
+}
+
 /** Media Query **/
 @media screen and (max-width: 1600px) {
     :root {
         font-size: 15px;
+    }
+
+    .work-done-section__bg img {
+        height: 600px;
     }
 
     .form-input {
@@ -1854,6 +1936,10 @@ header {
 @media screen and (max-width: 1300px) {
     :root {
         font-size: 14px;
+    }
+
+    .work-done-section__bg img {
+        height: 590px;
     }
 
     .banner-section__logo {
@@ -1952,6 +2038,63 @@ header {
     .banner-section__vector--four {
         top: 180px;
         left: 20px;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .nav__logo {
+        flex: 0 0 100%;
+        max-width: var(--full-width);
+    }
+
+    .nav__toggle-btn {
+        display: block;
+        position: absolute;
+        top: 50%;
+        right: 20px;
+        transform: translate(0, -50%);
+        cursor: pointer;
+    }
+
+    .nav__toggle-btn i {
+        color: var(--white-color);
+        font-size: 1.75rem;
+    }
+
+    .nav__menu {
+        position: absolute;
+        top: 110px;
+        background: var(--white-color);
+        width: var(--full-width);
+        max-width: var(--full-width);
+        padding: 0px 0;
+        z-index: 99;
+        left: 0;
+        display: none;
+        box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.16);
+    }
+
+    .nav__menu-list .nav__menu-list-item {
+        display: block;
+        margin-left: 0;
+        text-align: left;
+        border-bottom: 1px solid #e6e6e6;
+    }
+
+    .nav__menu-list-item:not(:last-child) a {
+        color: var(--body-color);
+        display: block;
+        font-weight: var(--font-normal);
+        position: relative;
+        padding: 15px 20px;
+    }
+
+    .nav__menu-list .nav__menu-list-item--desk {
+        display: none;
+    }
+
+    .nav__menu-list .nav__menu-list-item--mob {
+        display: block;
     }
 }
 
